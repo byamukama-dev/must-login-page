@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login or create your account.">
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="auth-container">
+        <section class="auth-card">
+
+            <!-- Brand / Welcome Section -->
+            <div class="welcome-panel">
+                
+<div class="brand">
+    <span class="brand-icon">
+        <img
+            src="https://images.openai.com/static-rsc-4/Njuo0I1fCg1gXzuUE7tvfj6VZ-LSOuTU1B4_EPCJ0dhblpVeLzoMYZsArJJfxyaleFGowJL85Z0vBOj5P9ZCkuRHAhWsZIf6XfEAnSIpRYPlR6D23HXh8IvOTxPSVr8ssqfD-P3EbXy1urNo6FS-eJ855WGmgc8fvQSOxRIQbGZ0TlnG7tw-uNAKNw-PoZTZ?purpose=fullsize"
+            alt="MUST logo"
+            class="must-logo">
+    </span>
+    <span>MUST</span>
+</div>
+
+
+                <div class="welcome-content">
+                    <h1>Welcome Over Here.</h1>
+                    <p>
+                        Login or create an account to access your information
+                    </p>
+                </div>
+
+                <div class="welcome-footer">
+                    This is my Login and Registration page
+                </div>
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-panel">
+
+                <div class="form-tabs">
+                    <button
+                        type="button"
+                        class="tab active"
+                        id="login-tab"
+                        aria-controls="login-form"
+                        aria-selected="true"
+                        role="tab">
+                        Login
+                    </button>
+
+                    <a href="./register.html">
+                        <button
+                        type="button"
+                        class="tab"
+                        id="register-tab"
+                        aria-controls="register-form"
+                        aria-selected="false"
+                        role="tab">
+                        Register
+                    </button>
+                    </a>
+                    
+                </div>
+
+                <!-- Login Form -->
+                <form id="login-form" class="auth-form">
+                    <div class="form-heading">
+                        <h2>Welcome back!</h2>
+                        <p>Enter your details to sign in.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-email">Email address</label>
+                        <input
+                            type="email"
+                            id="login-email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="login-password">Password</label>
+                            <a href="#" class="text-link"
+                               id="forgot-password">
+                                Forgot password?
+                            </a>
+                        </div>
+
+                        <input
+                            type="password"
+                            id="login-password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Sign In <span aria-hidden="true">→</span>
+                    </button>
+
+                    <p class="switch-text">
+                        Don't have an account?
+                        
+                        <a href="./register.html">
+                            <button type="button" class="inline-link"
+                                data-switch="register">
+                            Create one
+                        </button>
+                        </a>
+                        
+                    </p>
+                </form>
+
+                <!-- Registration Form -->
+               
+
+                <p id="form-message" class="form-message"
+                   role="status" aria-live="polite"></p>
+
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            © 2026 DERRiCK MUST. All rights reserved.
+        </footer>
+    </main>
+</body>
+</html>

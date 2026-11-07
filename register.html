@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUST - Register Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <main class="auth-container">
+        <section class="auth-card">
+
+            <!-- Brand / Welcome Section -->
+            <div class="welcome-panel">
+                
+<div class="brand">
+    <span class="brand-icon">
+        <img
+            src="https://images.openai.com/static-rsc-4/Njuo0I1fCg1gXzuUE7tvfj6VZ-LSOuTU1B4_EPCJ0dhblpVeLzoMYZsArJJfxyaleFGowJL85Z0vBOj5P9ZCkuRHAhWsZIf6XfEAnSIpRYPlR6D23HXh8IvOTxPSVr8ssqfD-P3EbXy1urNo6FS-eJ855WGmgc8fvQSOxRIQbGZ0TlnG7tw-uNAKNw-PoZTZ?purpose=fullsize"
+            alt="MUST logo"
+            class="must-logo">
+    </span>
+    <span>MUST REGiSTRATiON PAGE</span>
+</div>
+                <div class="welcome-content">
+                    <h1>Welcome Over Here.</h1>
+                    <p>
+                        Create an account to access your information
+                        at Mbarara University of Science and Technology.
+                    </p>
+                </div>
+
+                <div class="welcome-footer">
+                    This is my Login and Registration page
+                </div>
+            </div>
+
+            <div class="form-panel">
+
+                <form id="register-form" class="auth-form">
+                    <div class="form-heading">
+                        <h2>Create an account</h2>
+                        <p>Join us! It only takes a minute.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="full-name">Full name</label>
+                        <input
+                            type="text"
+                            id="full-name"
+                            name="fullName"
+                            placeholder="Your full name"
+                            autocomplete="name"
+                            minlength="2"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register-email">Email address</label>
+                        <input
+                            type="email"
+                            id="register-email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input
+                            type="password"
+                            id="register-password"
+                            name="password"
+                            placeholder="At least 8 characters"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">
+                            Confirm password
+                        </label>
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            name="confirmPassword"
+                            placeholder="Re-enter your password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" required>
+                            <span>
+                                I agree to the
+                                <a href="#" class="text-link">Terms</a>
+                                and
+                                <a href="#" class="text-link">
+                                    Privacy Policy
+                                </a>.
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Create Account
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+                    <p class="switch-text">
+                        Already have an account?
+                        <a href="index.html" class="inline-link">
+                            Sign in
+                        </a>
+                    </p>
+                </form>
+
+                <p id="form-message"
+                   class="form-message"
+                   role="status"
+                   aria-live="polite"></p>
+
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            © 2026 MUST. All rights reserved.
+        </footer>
+    </main>
+
+    <script>
+        const registerForm = document.getElementById("register-form");
+        const message = document.getElementById("form-message");
+
+        registerForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const password =
+                document.getElementById("register-password").value;
+
+            const confirmPassword =
+                document.getElementById("confirm-password").value;
+
+            if (password !== confirmPassword) {
+                message.textContent = "Passwords do not match.";
+                message.className = "form-message error";
+
+                document.getElementById("confirm-password").focus();
+                return;
+            }
+
+            message.textContent =
+                "Registration form validated. Connect a backend to create your account.";
+            message.className = "form-message";
+        });
+    </script>
+
+</body>
+</html>
